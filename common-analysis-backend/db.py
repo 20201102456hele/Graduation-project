@@ -31,6 +31,7 @@ class Database:
             return False
 
     def execute_many(self, sql, values):
+
         try:
             self.cursor.executemany(sql, values)
             self.conn.commit()
